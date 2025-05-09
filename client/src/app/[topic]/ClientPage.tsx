@@ -78,7 +78,7 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
   });
 
   return (
-    <div className="w-full flex flex-col items-center justify-center min-h-screen bg-grid-zinc-50 pb-20">
+    <div className="w-full flex flex-col items-center justify-center min-h-screen">
       <MaxWidthWrapper className="flex flex-col items-center gap-6 pt-20 z-1">
         <h1 className="text-4xl sm:text-5xl font-bold text-center tracking-tight text-balance">
           What people think about{" "}
@@ -100,7 +100,7 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
             fontSize={(data) => fontScale(data.value)}
             font={"Impact"}
             padding={2}
-            spiral="archimedean"
+            spiral="rectangular"
             rotate={0}
             random={() => 0.5}
           >
@@ -121,7 +121,7 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
           </Wordcloud>
         </div>
 
-        <div className="max-w-lg w-full">
+        <div className="max-w-lg w-full pb-20">
           <Label className="font-semibold tracking-tight text-lg pb-2">
             Here's what I think about {topicName}
           </Label>
@@ -142,7 +142,7 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
           </div>
         </div>
       </MaxWidthWrapper>
-      <div className="overflow-hidden bg-background p-20">
+      <div className="overflow-hidden bg-background">
         <GridPattern
           width={56}
           height={56}
