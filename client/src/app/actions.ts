@@ -20,6 +20,7 @@ export const createTopic = async ({ topicName }: { topicName: string }) => {
   redirect(`/${topicName}`);
 };
 
+// hello world world
 //  hello -> 1
 //  world -> 2
 function wordFreq(text: string): { text: string; value: number }[] {
