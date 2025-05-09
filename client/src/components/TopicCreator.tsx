@@ -14,15 +14,16 @@ const TopicCreator = () => {
   });
 
   return (
-    <div className="mt-12 flex flex-col gap-2">
+    <div className="mt-18 flex flex-col gap-2">
       <div className="flex gap-2">
         <Input
           value={input}
           onChange={({ target }) => setInput(target.value)}
-          className="bg-white min-w-64"
+          className="bg-white md:min-w-96 h-12 md:text-lg font-semibold"
           placeholder="Enter topic here..."
         />
         <Button
+          className="h-12 px-6"
           disabled={isPending}
           onClick={() => mutate({ topicName: input })}
         >
