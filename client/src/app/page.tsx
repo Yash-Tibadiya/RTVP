@@ -51,7 +51,7 @@ export default async function Home() {
                     <div className="w-2 h-2 rounded-full mt-0.5 bg-green-500 sm:w-3 sm:h-3 md:h-4 md:w-4 animate-ping"></div>
                   </div>
                   <span className="font-semibold text-purple-600">
-                    {/* {Math.ceil(Number(servedRequests) / 10) * 10} */} 237
+                    {Math.ceil(Number(servedRequests) / 10) * 10}
                   </span>{" "}
                   served requests
                 </div>
