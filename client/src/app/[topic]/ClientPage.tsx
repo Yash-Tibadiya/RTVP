@@ -131,11 +131,20 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
               onChange={({ target }) => setInput(target.value)}
               className="bg-white md:min-w-96 h-12 md:text-lg font-semibold"
               placeholder={`${topicName} is absolutely...`}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  mutate({ comment: input, topicName });
+                  setInput("");
+                }
+              }}
             />
             <Button
               className="h-12 px-6"
               disabled={isPending}
-              onClick={() => mutate({ comment: input, topicName })}
+              onClick={() => {
+                mutate({ comment: input, topicName });
+                setInput("");
+              }}
             >
               Share
             </Button>
