@@ -28,7 +28,7 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
 
   useEffect(() => {
     socket.emit("join-room", `room:${topicName}`);
-  }, []);
+  }, [ topicName ]);
 
   useEffect(() => {
     socket.on("room-update", (message: string) => {
@@ -123,7 +123,7 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
 
         <div className="max-w-lg w-full pb-20">
           <Label className="font-semibold tracking-tight text-lg pb-2">
-            Here's what I think about {topicName}
+            Here&apos;s what I think about {topicName}
           </Label>
           <div className="mt-1 flex gap-2 items-center">
             <Input
