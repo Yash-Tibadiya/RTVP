@@ -4,7 +4,7 @@
 
 ---
 
-![RTVP Preview](https://img.enacton.com/ShareX/2025/05/PPeyqvl1Zw.png)
+![RTVP Preview](https://img.enacton.com/ShareX/2025/05/cbh1icDjx6.png)
 ![RTVP Preview](https://img.enacton.com/ShareX/2025/05/uhaflaTRIs.png)
 
 ## 🤔 What is RTVP?
