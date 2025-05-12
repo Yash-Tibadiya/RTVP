@@ -13,7 +13,7 @@ import { submitComment } from "../actions";
 import { io } from "socket.io-client";
 import { GridPattern } from "@/components/magicui/grid-pattern";
 
-const socket = io("http://localhost:8080");
+const socket = io("https://rtvp.onrender.com");
 
 interface ClientPageProps {
   topicName: string;
@@ -28,7 +28,7 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
 
   useEffect(() => {
     socket.emit("join-room", `room:${topicName}`);
-  }, [ topicName ]);
+  }, [topicName]);
 
   useEffect(() => {
     socket.on("room-update", (message: string) => {
