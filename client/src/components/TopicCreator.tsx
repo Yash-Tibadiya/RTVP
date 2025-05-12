@@ -21,11 +21,20 @@ const TopicCreator = () => {
           onChange={({ target }) => setInput(target.value)}
           className="bg-white md:min-w-96 h-12 md:text-lg font-semibold"
           placeholder="Enter topic here..."
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              mutate({ topicName: input });
+              setInput("");
+            }
+          }}
         />
         <Button
-          className="h-12 px-6"
+          className="h-12 px-6 cursor-pointer"
           disabled={isPending}
-          onClick={() => mutate({ topicName: input })}
+          onClick={() => {
+            mutate({ topicName: input });
+            setInput("");
+          }}
         >
           Create
         </Button>
