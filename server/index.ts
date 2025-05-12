@@ -14,7 +14,7 @@ const subRedis = new Redis(process.env.REDIS_CONNECTION_STRING);
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["https://rtvp.vercel.app"],
+    origin: ["https://rtvp.yash14.me"],
     methods: ["GET", "POST"],
     credentials: true,
   },
