@@ -84,7 +84,6 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
           What people think about{" "}
           <span className="text-blue-600">{topicName}</span>:
         </h1>
-
         <div className="flex gap-1 items-center justify-center bg-gray-100 rounded-2xl p-2">
           <div className="flex items-center justify-center relative mr-1 z-10">
             <div className="absolute w-1 h-1 rounded-full mt-0.5 bg-green-500 sm:w-2 sm:h-2 md:h-3 md:w-3 flex items-center justify-center"></div>
@@ -139,7 +138,7 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
               }}
             />
             <Button
-              className="h-12 px-6"
+              className="h-12 px-6 cursor-pointer"
               disabled={isPending}
               onClick={() => {
                 mutate({ comment: input, topicName });
@@ -147,6 +146,30 @@ const ClientPage = ({ topicName, initialData }: ClientPageProps) => {
               }}
             >
               Share
+            </Button>
+            <Button
+              className="h-12 px-2 cursor-pointer"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  `https://rtvp.yash14.me/${topicName}`
+                );
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-copy"
+              >
+                <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v2" />
+              </svg>
             </Button>
           </div>
         </div>
